@@ -46,7 +46,7 @@ public class ProductPage extends Page {
     {
         wait.until(elementToBeClickable(SpecialPropProduct()));
         add.click();
-       // wait.until(not(ExpectedConditions.attributeToBe(By.cssSelector("#cart .quantity"), "textContent", oldcount)));
+        wait.until(not(ExpectedConditions.attributeToBe(By.cssSelector("#cart .quantity"), "textContent", oldcount)));
     }
 
    // public By TextBasket() {return By.xpath("//span [contains(@class, 'quantity')]");}

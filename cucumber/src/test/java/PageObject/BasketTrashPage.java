@@ -33,7 +33,7 @@ public class BasketTrashPage extends Page {
             wait.until(elementToBeClickable(By.cssSelector("button[name=remove_cart_item]")));
             driver.findElement(By.cssSelector("button[name=remove_cart_item]")).click();
             //Thread.sleep(500);
-           // Thread.sleep(500); иногда срабатывает с засыпанием иногда нет
+           //Thread.sleep(500); //иногда срабатывает с засыпанием иногда нет
             wait.until(stalenessOf(table)); //не всегда работает этот момент
             if (i != k - 1) {
                 wait.until(visibilityOfElementLocated(By.cssSelector(".dataTable")));//после удаления таблицы нет строк

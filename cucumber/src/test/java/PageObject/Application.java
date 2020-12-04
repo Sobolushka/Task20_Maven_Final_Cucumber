@@ -36,6 +36,7 @@ public class Application {
             String oldcount = productPage.countItems();
             productPage.AddNewProduct(oldcount);
             Thread.sleep(500);
+            //GeneralPageandNewProduct(); //Можно добавить для добавления разных товаров
         }
     }
     public void BasketPage() throws InterruptedException
