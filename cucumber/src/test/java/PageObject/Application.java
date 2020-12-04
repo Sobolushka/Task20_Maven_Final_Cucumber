@@ -30,9 +30,9 @@ public class Application {
     {
         Generalpage.Generalpage1();
     }
-    public void ProductPage() throws InterruptedException
+    public void ProductPage(int count) throws InterruptedException
     {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < count; i++) {
             String oldcount = productPage.countItems();
             productPage.AddNewProduct(oldcount);
             Thread.sleep(500);

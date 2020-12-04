@@ -13,14 +13,14 @@ public class Steps  implements En {
         When("Go to the shop", () ->{
             app.GeneralPageandNewProduct();
         });
-        And("Add 3 product in basket",() ->{
-            app.ProductPage();
+        And("Add {string} product in basket",(String count) ->{
+            app.ProductPage(Integer.parseInt(count));
         });
-        And("Go to the basket", () ->{
+        And("Go to the basket and delete all products", () ->{
             app.BasketPage();
         });
 
-        Then("There no items", () ->{
+        Then("The basket is empty", () ->{
             app.GeneralPage1();
             String str = app.CheckBasket();
             Assert.assertEquals(app.CheckBasket(),"0");
